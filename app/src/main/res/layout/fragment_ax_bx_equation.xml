@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".equation.AxBxEquation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/aValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="a"
+            android:autofillHints="none"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"
+            android:inputType="number|numberDecimal|numberSigned"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="parent"
+            >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/x2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x + "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/aValue"
+            app:layout_constraintBaseline_toBaselineOf="@id/aValue"
+            >
+
+        </TextView>
+
+        <EditText
+            android:autofillHints="none"
+            android:id="@+id/bValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="b"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:inputType="number|numberDecimal|numberSigned"
+            android:textSize="20sp"
+            android:imeOptions="actionDone"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/x2"
+            app:layout_constraintBaseline_toBaselineOf="parent"
+            >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/xPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/bValue"
+            app:layout_constraintBaseline_toBaselineOf="@id/aValue"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" = 0"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/xPlus"
+            app:layout_constraintBaseline_toBaselineOf="@id/aValue"
+            >
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
