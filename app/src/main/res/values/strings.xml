@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="resultInfo">Результат</string>
+    <string name="solve">Решить</string>
+    <string name="selectType">Выберите тип уравнения</string>
+    <string name="solvingInfo">Решение квадратных уравнений</string>
 </resources>
