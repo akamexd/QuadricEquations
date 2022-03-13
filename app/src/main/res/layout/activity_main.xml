@@ -136,13 +136,15 @@
 
     </Button>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/resultBlock"
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="350dp"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/getResult"
+        app:layout_constraintStart_toStartOf="@id/getResult"
         >
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

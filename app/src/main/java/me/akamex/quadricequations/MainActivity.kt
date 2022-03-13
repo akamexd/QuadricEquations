@@ -19,7 +19,7 @@ import me.akamex.quadricequations.equation.*
 
 class MainActivity : AppCompatActivity() {
 
-    var currentEquation: EquationFragment? = null
+    private var currentEquation: EquationFragment? = null
 
     private fun checkedHandle(index: Int) {
         currentEquation = when(index) {
@@ -80,21 +80,37 @@ class MainActivity : AppCompatActivity() {
                     val steps = result.steps
                     val resultValue = result.result
 
-                    var textViewOld: TextView? = null
-                    resultValue?.split("\n")?.forEach {
+                    val resultBlockView = findViewById<LinearLayout>(R.id.resultBlock)
+
+                    resultBlockView.removeAllViews()
+
+                    resultValue?.split("\n")?.toMutableList()?.apply {
+                        add(0, "Результат:")
+                    }?.forEach {
                         val textView = TextView(this@MainActivity)
 
-                        val layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                        layoutParams.addRule(RelativeLayout.ALIGN_START, R.id.getResult)
-                        layoutParams.addRule(RelativeLayout.BELOW, if(textViewOld == null) R.id.getResult else textViewOld!!.id)
+                        val layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                         textView.layoutParams = layoutParams
+                        textView.textSize = 18f
+                        textView.setTextColor(Color.rgb(0, 0, 0))
                         textView.text = Html.fromHtml(it, Html.FROM_HTML_MODE_LEGACY)
 
-                        findViewById<RelativeLayout>(R.id.resultBlock).addView(textView)
-
-                        textViewOld = textView
+                        resultBlockView.addView(textView)
                     }
 
+                    steps.toMutableList().apply {
+                        add(0, "Шаги решения:")
+                    }.forEach {
+                        val textView = TextView(this@MainActivity)
+
+                        val layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                        textView.layoutParams = layoutParams
+                        textView.textSize = 18f
+                        textView.setTextColor(Color.rgb(0, 0, 0))
+                        textView.text = Html.fromHtml(it, Html.FROM_HTML_MODE_LEGACY)
+
+                        resultBlockView.addView(textView)
+                    }
                 }
             }
         }
