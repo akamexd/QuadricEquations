@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="headerHeight">120dp</dimen>
+    <dimen name="headerTextSizeTop">25sp</dimen>
+    <dimen name="headerTextSizeBottom">36sp</dimen>
+    <dimen name="headerTextMarginTop">6dp</dimen>
+
+    <dimen name="selectTypeMarginStart">30dp</dimen>
+    <dimen name="selectTypeMarginTop">20dp</dimen>
+    <dimen name="selectTypeTextSize">20sp</dimen>
+
+    <dimen name="equationTypeGroupMarginTop">5dp</dimen>
+    <dimen name="equationTypeHeight">30dp</dimen>
+    <dimen name="equationTypeTextSize">18sp</dimen>
+
+    <dimen name="equationMarginTop">20dp</dimen>
+
+    <dimen name="solveButtonWidth">200dp</dimen>
+    <dimen name="solveButtonTextSize">20sp</dimen>
+    <dimen name="solveButtonMarginTop">20dp</dimen>
+
+    <dimen name="resultBlockWidth">380dp</dimen>
 </resources>
