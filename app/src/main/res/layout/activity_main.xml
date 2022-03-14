@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/mainLayout"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -73,6 +74,7 @@
             android:layout_height="30dp"
             android:text=""
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:checked="true"
             >
 
@@ -82,6 +84,7 @@
             android:id="@+id/axbxEquationButton"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:textColor="@color/black"
             android:text=""
             android:textSize="18sp"
             >
@@ -92,6 +95,7 @@
             android:id="@+id/axcEquationButton"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:textColor="@color/black"
             android:text=""
             android:textSize="18sp"
             >
@@ -102,6 +106,7 @@
             android:id="@+id/axEquationButton"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:textColor="@color/black"
             android:text=""
             android:textSize="18sp"
             >

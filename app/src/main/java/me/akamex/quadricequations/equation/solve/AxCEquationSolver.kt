@@ -27,6 +27,6 @@ object AxCEquationSolver : EquationSolver {
 
         steps.add("x = ${x.toStringValue()}")
 
-        return SolveResult(error = null, "x = $x", steps)
+        return SolveResult(error = null, "x = ${x.toStringValue()}", steps)
     }
 }
